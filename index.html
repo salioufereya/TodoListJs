@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- <i class="fa-regular fa-circle"></i> -->
+
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="to-do">Todo List</h2>
+            <ul class="task-list">
+                <li class="task-filter">
+                    <span class="material-symbols-outlined">
+                        light_mode
+                    </span>
+                    <span>Ma Journée</span>
+                </li>
+                <li class="task-filter">
+                    <span class="material-symbols-outlined">
+                        grade
+                    </span>
+                    <span>Importantes</span>
+                </li>
+                <li class="task-filter">
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                    <span>Plannifiées</span>
+                </li>
+                <li class="task-filter">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                    <span>Tâches</span>
+                </li>
+            </ul>
+
+            <div class="show-color">
+                <i class="fa-solid fa-chevron-down"></i>
+                Choisir une couleur
+            </div>
+
+            <div class="color-container">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <section class="section">
+                <header class="header">
+                    <span class="planning-title">
+                        <span class="material-symbols-outlined">light_mode</span>
+                        <span>Ma Journée</span>
+                    </span>
+                    <div class="rigth-side">
+                        <input type="search" id="search-task" placeholder="rechercher une tâche">
+                    </div>
+                </header>
+    
+                <div class="line"></div>
+
+                <div class="task-container">
+
+                    <div class="sort-by-container">
+                        <select class="sortSelect">sync_alt
+                            <option value="" class="material-symbols-outlined sortSelect">sync_alt</option>
+                            <option value="defaut">Par Défaut</option>
+                            <option value="dateCreation">Par Date de Création</option>
+                            <option value="dateEchea">Par Date d'échéance</option>
+                            <option value="title">Tri par titre</option>
+                            <option value="ordre">Tri  par Ordre d'importance</option>
+                        </select>
+                       
+                    </div>
+
+                    <div class="add-task-item">
+                        <div class="text">
+                            <span class="add-icon">+</span>
+                            <input type="text" id="add-new-task" placeholder="Ajouter une nouvelle tâche">
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <div class="icons">
+                                <input type="date" id="date">
+                                <span class="material-symbols-outlined">
+                                    calendar_month
+                                </span>
+                                <i class="fa-regular fa-bell"></i>
+                                <i class="fa-solid fa-repeat"></i>
+                            </div>
+    
+                            <button class="add-task-btn">Ajouter</button>
+                        </div>
+                    </div>
+    
+                    <div class="tasks">
+                       
+    
+                       
+                        
+                    </div>
+    
+                </div>
+            </section>
+
+            <section class="task-details">
+                <ul class="task-detail">
+                    <li class="task-detail-item task-name">
+                        <textarea class="task-title">Projet planning</textarea>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </li>
+                    <li class="task-detail-item">
+                        <textarea class="task-title">Etape 1: Faire le modal Etape 1: Faire le modal</textarea>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </li>
+                    <li class="task-detail-item">
+                        <textarea class="task-title">Etape 2: Faire le modal</textarea>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </li>
+                    <li class="task-detail-item">
+                        <textarea class="task-title">Etape 3: Faire le modal</textarea>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </li>
+                    <li class="new-sub-task">
+                        <textarea class="task-title">Étape suivante</textarea>
+                        <i class="fa-solid fa-plus"></i>
+                    </li>
+                </ul>
+
+                <ul class="task-detail"></ul>
+                <div class="task-detail"></div>
+                <div class="task-detail"></div>
+            </section>
+
+            <!-- <div class="trash-container">
+                <i class="fa-solid fa-trash"></i>
+            </div> -->
+        </main>
+    </div>
+
+    
+    
+
+</body>
+
+</html>
